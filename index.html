@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#080511">
 <meta name="description" content="Taher Montasser — Video Editor, Graphic Designer and Instructor">
-<title>طاهر منتصر | بورتفوليو</title>
+<title>طاهر منتصر | معرض الأعمال</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -123,6 +123,24 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:18px;pa
 @keyframes gradient{to{background-position:220% center}}
 @keyframes sweep{0%{transform:translateX(-250%)}100%{transform:translateX(500%)}}
 @media(max-width:900px){.availability{display:none}.hero{min-height:auto;padding:65px 0;grid-template-columns:1fr;gap:20px}.hero-copy{text-align:center;grid-row:2}.intro{margin-inline:auto}.roles,.actions{justify-content:center}.visual{grid-row:1;height:400px;max-width:560px;width:100%;margin:auto}.profile-card{width:260px}.section-head{display:block}.about-grid{grid-template-columns:1fr}.portfolio-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Latest YouTube uploads */
+.youtube-section{position:relative}
+.youtube-section .section-head{margin-bottom:26px}
+.youtube-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.youtube-card{display:block;overflow:hidden;text-decoration:none;color:var(--text);border:1px solid rgba(216,180,254,.16);border-radius:18px;background:rgba(19,10,32,.78);box-shadow:0 10px 32px rgba(0,0,0,.16);transition:transform .25s,border-color .25s,box-shadow .25s}
+.youtube-card:hover{transform:translateY(-5px);border-color:rgba(217,70,239,.65);box-shadow:0 16px 38px rgba(126,34,206,.2)}
+.youtube-thumb{position:relative;aspect-ratio:16/9;background:linear-gradient(135deg,#2e1065,#701a75,#172554);overflow:hidden}
+.youtube-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}
+.youtube-card:hover .youtube-thumb img{transform:scale(1.04)}
+.youtube-play{position:absolute;inset:0;display:grid;place-items:center;background:linear-gradient(transparent,rgba(0,0,0,.22))}
+.youtube-play span{width:48px;height:34px;border-radius:11px;background:#ff0033;color:#fff;display:grid;place-items:center;font-size:19px;box-shadow:0 4px 20px #0005}
+.youtube-card h3{font-size:14px;line-height:1.65;margin:0;padding:14px 15px 17px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:74px}
+.youtube-status{color:var(--muted);font-size:13px;line-height:1.8;text-align:center;padding:24px 12px;grid-column:1/-1}
+.youtube-more{display:flex;justify-content:center;margin-top:24px}
+@media(max-width:850px){.youtube-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}}
+@media(max-width:600px){.youtube-grid{grid-template-columns:1fr;gap:14px}.youtube-card h3{font-size:13px;min-height:auto}.youtube-thumb{aspect-ratio:16/9}}
+
 @media(max-width:600px){.social-grid{grid-template-columns:1fr;gap:10px}.social-link{padding:13px}.wrap{width:calc(100% - 28px)}.topbar{top:6px;margin-top:6px;padding:11px 12px;gap:10px;flex-wrap:wrap}.brand{font-size:16px}.nav{order:3;width:100%;justify-content:space-between;gap:10px;border-top:1px solid rgba(216,180,254,.1);padding-top:9px;font-size:11px}.tools{margin-inline-start:auto}.lang-select{font-size:11px;max-width:112px;padding:7px}.hero{padding:40px 0 50px}h1{font-size:clamp(43px,13vw,64px);letter-spacing:-1.5px}.roles{font-size:12px;gap:7px}.intro{font-size:14px}.visual{height:390px;width:100%;overflow:clip}.profile-card{width:min(340px,86vw);height:390px;border-radius:0}.ring{width:min(88%,310px);height:62%}.ring.two{width:min(96%,330px);height:50%}.profile-initials{font-size:85px}.float-chip{font-size:10px;padding:9px 11px}.section{padding:58px 0}.portfolio-grid{grid-template-columns:1fr}.project-media{height:220px}.services-grid{grid-template-columns:1fr 1fr;gap:10px}.service{padding:18px 14px;min-height:175px}.service h3{font-size:13px}.service p{font-size:11px}.section-head h2{font-size:31px}footer{flex-direction:column;text-align:center}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
 </style>
@@ -133,7 +151,7 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:18px;pa
 <header class="topbar">
   <a class="brand" href="#home">Taher <span>Montasser</span></a>
   <nav class="nav" aria-label="Main navigation">
-    <a href="#home" data-i18n="navHome">الرئيسية</a><a href="#about" data-i18n="navAbout">عني</a><a href="#portfolio" data-i18n="navPortfolio">أعمالي</a><a href="#services" data-i18n="navServices">خدماتي</a><a href="#links" data-i18n="navLinks">روابطي</a><a href="#contact" data-i18n="navContact">تواصل</a>
+    <a href="#home" data-i18n="navHome">الرئيسية</a><a href="#about" data-i18n="navAbout">عني</a><a href="#portfolio" data-i18n="navPortfolio">أعمالي</a><a href="#youtube" data-i18n="navYoutube">يوتيوب</a><a href="#services" data-i18n="navServices">خدماتي</a><a href="#links" data-i18n="navLinks">روابطي</a><a href="#contact" data-i18n="navContact">تواصل</a>
   </nav>
   <div class="tools">
     <label for="language" style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)">Language</label>
@@ -148,7 +166,7 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:18px;pa
   <div class="hero-copy reveal">
     <div class="eyebrow" data-i18n="eyebrow">إبداع بصري يصنع الفرق</div>
     <h1 data-i18n-html="heroTitle">أنا طاهر<br><span>منتصر</span></h1>
-    <div class="roles"><span data-i18n="role1">مونتير</span><b>✦</b><span data-i18n="role2">مصمم جرافيك</span><b>✦</b><span data-i18n="role3">مدرّب</span></div>
+    <div class="roles"><span data-i18n="role1">مونتير فيديو</span><b>✦</b><span data-i18n="role2">مصمم جرافيك</span><b>✦</b><span data-i18n="role3">مدرّب</span></div>
     <p class="intro" data-i18n="intro">أحوّل الأفكار إلى محتوى بصري يروي قصة، ويصل للناس بأبسط الطرق وأقوى التأثيرات.</p>
     <div class="actions"><a class="btn primary" href="#portfolio"><span data-i18n="viewWork">استكشف أعمالي</span> <span aria-hidden="true">↙</span></a><a class="btn secondary" href="https://direct.me/taher-montasser" target="_blank" rel="noopener"><span data-i18n="connect">تواصل معي</span> ↗</a></div>
     <div class="tagline">CREATE · EDIT · INSPIRE</div>
@@ -162,7 +180,7 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:18px;pa
 <section class="section" id="about">
   <div class="section-head reveal"><div><div class="kicker" data-i18n="aboutKicker">نبذة عني</div><h2 data-i18n="aboutTitle">أفكار تتحوّل إلى تجارب بصرية</h2></div><p class="section-desc" data-i18n="aboutDesc">أجمع بين الإبداع والوضوح والاهتمام بالتفاصيل لصناعة محتوى يترك انطباعًا.</p></div>
   <div class="about-grid">
-    <div class="glass reveal"><p data-i18n="aboutText">أنا طاهر منتصر، مصمم جرافيك ومونتير ومدرّب. أساعد الأفراد والعلامات التجارية على تحويل أفكارهم إلى تصميمات ومقاطع فيديو جذابة، مع اهتمام بالقصة والإيقاع والهوية البصرية.</p></div>
+    <div class="glass reveal"><p data-i18n="aboutText">أنا طاهر منتصر، مصمم جرافيك ومونتير فيديو ومدرّب. أساعد الأفراد والعلامات التجارية على تحويل أفكارهم إلى تصميمات ومقاطع فيديو جذابة، مع اهتمام بالقصة والإيقاع والهوية البصرية.</p></div>
     <div class="skills reveal">
       <div class="skill"><div class="skill-icon">✂</div><div><strong data-i18n="skill1">مونتاج الفيديو</strong><small data-i18n="skill1sub">قصص مرئية وإعلانات ومحتوى منصات</small></div></div>
       <div class="skill"><div class="skill-icon">✧</div><div><strong data-i18n="skill2">التصميم الجرافيكي</strong><small data-i18n="skill2sub">تصميمات وهوية بصرية ومعالجات إبداعية</small></div></div>
@@ -183,6 +201,13 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:18px;pa
   </div>
   <div class="portfolio-note reveal" data-i18n="portfolioNote">ملاحظة: البطاقات الحالية نماذج شكلية وليست أعمالًا فعلية. عند تجهيز صورك أو روابط الفيديو، استبدلها داخل قسم portfolio في الملف.</div>
 </section>
+
+<section class="section youtube-section" id="youtube">
+  <div class="section-head reveal"><div><div class="kicker" data-i18n="youtubeKicker">جديد القناة</div><h2 data-i18n="youtubeTitle">أحدث فيديوهاتي على يوتيوب</h2></div><p class="section-desc" data-i18n="youtubeDesc">آخر 5 فيديوهات من القناة، بتتحدث تلقائيًا عند نشر فيديو جديد.</p></div>
+  <div class="youtube-grid" id="youtubeVideos" aria-live="polite"><div class="youtube-status" data-i18n="youtubeLoading">جاري تحميل أحدث الفيديوهات...</div></div>
+  <div class="youtube-more"><a class="btn primary" href="https://www.youtube.com/@TaherMontasser/videos" target="_blank" rel="noopener" data-i18n="youtubeMore">شاهد كل الفيديوهات ↗</a></div>
+</section>
+
 <section class="section" id="services">
   <div class="section-head reveal"><div><div class="kicker" data-i18n="servicesKicker">كيف أساعدك؟</div><h2 data-i18n="servicesTitle">خدمات إبداعية من الفكرة للتنفيذ</h2></div></div>
   <div class="services-grid">
@@ -218,27 +243,27 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:18px;pa
 <script>
 const translations = {
 ar: {
-navHome:"الرئيسية",navAbout:"عني",navPortfolio:"أعمالي",navServices:"خدماتي",navLinks:"روابطي",navContact:"تواصل",available:"متاح للمشاريع",
-eyebrow:"إبداع بصري يصنع الفرق",heroTitle:"أنا طاهر<br><span>منتصر</span>",role1:"مونتير",role2:"مصمم جرافيك",role3:"مدرّب",intro:"أحوّل الأفكار إلى محتوى بصري يروي قصة، ويصل للناس بأبسط الطرق وأقوى التأثيرات.",viewWork:"استكشف أعمالي",connect:"تواصل معي",profileLabel:"صناعة محتوى • تصميم • مونتاج",
+navHome:"الرئيسية",navAbout:"عني",navPortfolio:"أعمالي",navYoutube:"يوتيوب",navServices:"خدماتي",navLinks:"روابطي",navContact:"تواصل",available:"متاح للمشاريع",
+eyebrow:"إبداع بصري يصنع الفرق",heroTitle:"أنا طاهر<br><span>منتصر</span>",role1:"مونتير فيديو",role2:"مصمم جرافيك",role3:"مدرّب",intro:"أحوّل الأفكار إلى محتوى بصري يروي قصة، ويصل للناس بأبسط الطرق وأقوى التأثيرات.",viewWork:"استكشف أعمالي",connect:"تواصل معي",profileLabel:"صناعة محتوى • تصميم • مونتاج",
 aboutKicker:"نبذة عني",aboutTitle:"أفكار تتحوّل إلى تجارب بصرية",aboutDesc:"أجمع بين الإبداع والوضوح والاهتمام بالتفاصيل لصناعة محتوى يترك انطباعًا.",aboutText:"أنا طاهر منتصر، مصمم جرافيك ومونتير فيديو ومدرّب. أساعد الأفراد والعلامات التجارية على تحويل أفكارهم إلى تصميمات ومقاطع فيديو جذابة، مع اهتمام بالقصة والإيقاع والهوية البصرية.",
 skill1:"مونتاج الفيديو",skill1sub:"قصص مرئية وإعلانات ومحتوى منصات",skill2:"التصميم الجرافيكي",skill2sub:"تصميمات وهوية بصرية ومعالجات إبداعية",skill3:"صناعة المحتوى",skill3sub:"فكرة واضحة وتنفيذ بصري مؤثر",skill4:"التدريب والتعليم",skill4sub:"تبسيط المهارات ومشاركة الخبرة",
-portfolioKicker:"مختارات من أعمالي",portfolioTitle:"المعرض الإبداعي",portfolioDesc:"مكان لعرض مشاريع التصميم والمونتاج والتلاعب بالصور. استبدل البطاقات التجريبية بأعمالك الحقيقية.",filterAll:"الكل",filterDesign:"تصميم",filterVideo:"فيديو",filterManipulation:"معالجة صور",sampleMedia:"مكان صورة المشروع",sampleVideo:"مكان فيديو المشروع",typeDesign:"تصميم جرافيك",typeVideo:"مونتاج فيديو",typeManipulation:"معالجة الصور",project1:"مشروع تصميم وهوية بصرية",project2:"فيديو إعلاني أو قصير",project3:"تكوين بصري سينمائي",projectDesc1:"أضف هنا وصفًا قصيرًا لفكرة المشروع والهدف منه.",projectDesc2:"أضف نبذة عن أسلوب المونتاج أو قصة الفيديو.",projectDesc3:"أضف تفاصيل الفكرة والتقنيات المستخدمة في العمل.",projectLink:"أضف رابط المشروع ↗",portfolioNote:"ملاحظة: البطاقات الحالية نماذج شكلية وليست أعمالًا فعلية. عند تجهيز صورك أو روابط الفيديو، استبدلها داخل قسم portfolio في الملف.",
+youtubeKicker:"جديد القناة",youtubeTitle:"أحدث فيديوهاتي على يوتيوب",youtubeDesc:"آخر 5 فيديوهات من القناة، بتتحدث تلقائيًا عند نشر فيديو جديد.",youtubeLoading:"جاري تحميل أحدث الفيديوهات...",youtubeMore:"شاهد كل الفيديوهات ↗",youtubeError:"تعذّر تحميل الفيديوهات الآن. تقدر تشاهد القناة مباشرة من الزر بالأسفل.",portfolioKicker:"مختارات من أعمالي",portfolioTitle:"المعرض الإبداعي",portfolioDesc:"مكان لعرض مشاريع التصميم والمونتاج والتلاعب بالصور. استبدل البطاقات التجريبية بأعمالك الحقيقية.",filterAll:"الكل",filterDesign:"تصميم",filterVideo:"فيديو",filterManipulation:"معالجة صور",sampleMedia:"مكان صورة المشروع",sampleVideo:"مكان فيديو المشروع",typeDesign:"تصميم جرافيك",typeVideo:"مونتاج فيديو",typeManipulation:"معالجة الصور",project1:"مشروع تصميم وهوية بصرية",project2:"فيديو إعلاني أو قصير",project3:"تكوين بصري سينمائي",projectDesc1:"أضف هنا وصفًا قصيرًا لفكرة المشروع والهدف منه.",projectDesc2:"أضف نبذة عن أسلوب المونتاج أو قصة الفيديو.",projectDesc3:"أضف تفاصيل الفكرة والتقنيات المستخدمة في العمل.",projectLink:"أضف رابط المشروع ↗",portfolioNote:"ملاحظة: البطاقات الحالية نماذج شكلية وليست أعمالًا فعلية. عند تجهيز صورك أو روابط الفيديو، استبدلها داخل قسم portfolio في الملف.",
 linksKicker:"تابعني على منصاتك المفضلة",linksTitle:"خلّينا على تواصل",linksDesc:"كل حساباتي وروابطي في مكان واحد — اختار المنصة اللي تناسبك.",socialBehance:"أعمال التصميم",socialFacebook:"تابعني على فيسبوك",socialYoutube:"فيديوهاتي وشروحاتي",socialTelegram:"قناة التليجرام",socialInstagram:"صور وكواليس",socialTiktok:"مقاطع قصيرة",socialX:"تابع آخر التحديثات",socialLinkedin:"التواصل المهني",socialBlogTitle:"المدونة / Blog",socialBlog:"مقالات وشروحات",servicesKicker:"كيف أساعدك؟",servicesTitle:"خدمات إبداعية من الفكرة للتنفيذ",service1:"التصميم الجرافيكي",service1desc:"تصميمات سوشيال ميديا وهوية بصرية.",service2:"مونتاج الفيديو",service2desc:"فيديوهات قصيرة وإعلانات وسرد بصري.",service3:"معالجة الصور",service3desc:"تركيب صور ولمسات فنية سينمائية.",service4:"التدريب",service4desc:"تعليم عملي للتصميم والمونتاج وصناعة المحتوى.",contactKicker:"لنعمل معًا",contactTitle:"عندك مشروع في بالك؟",contactText:"يسعدني أسمع فكرتك ونحوّلها إلى تجربة بصرية مميزة. تواصل معي من خلال الرابط التالي.",footer:"© طاهر منتصر — كل الحقوق محفوظة"
 },
 en: {
-navHome:"Home",navAbout:"About",navPortfolio:"Portfolio",navServices:"Services",navLinks:"Links",navContact:"Contact",available:"Available for projects",
+navHome:"Home",navAbout:"About",navPortfolio:"Portfolio",navYoutube:"YouTube",navServices:"Services",navLinks:"Links",navContact:"Contact",available:"Available for projects",
 eyebrow:"Visual creativity that makes a difference",heroTitle:"I'm Taher<br><span>Montasser</span>",role1:"Video Editor",role2:"Graphic Designer",role3:"Instructor",intro:"I turn ideas into visual stories that connect with people through clear concepts and impactful execution.",viewWork:"Explore my work",connect:"Let's connect",profileLabel:"Content • Design • Editing",
 aboutKicker:"A little about me",aboutTitle:"Ideas transformed into visual experiences",aboutDesc:"I combine creativity, clarity, and attention to detail to make content that leaves an impression.",aboutText:"I'm Taher Montasser, a graphic designer, video editor, and instructor. I help people and brands turn ideas into engaging designs and videos, with a focus on storytelling, rhythm, and visual identity.",
 skill1:"Video Editing",skill1sub:"Visual stories, ads, and social content",skill2:"Graphic Design",skill2sub:"Design systems, branding, and creative visuals",skill3:"Content Creation",skill3sub:"Clear ideas with impactful visual execution",skill4:"Training & Teaching",skill4sub:"Practical learning and sharing experience",
-portfolioKicker:"Selected work",portfolioTitle:"Creative Portfolio",portfolioDesc:"A home for design, editing, and photo-manipulation projects. Replace these sample cards with your real work.",filterAll:"All",filterDesign:"Design",filterVideo:"Video",filterManipulation:"Photo Art",sampleMedia:"Project image placeholder",sampleVideo:"Project video placeholder",typeDesign:"Graphic Design",typeVideo:"Video Editing",typeManipulation:"Photo Manipulation",project1:"Branding & Visual Identity",project2:"Promo or Short-form Video",project3:"Cinematic Photo Artwork",projectDesc1:"Add a short description of the idea and goal of this project.",projectDesc2:"Describe the editing style or story behind this video.",projectDesc3:"Add details about the concept and techniques used.",projectLink:"Add project link ↗",portfolioNote:"Note: These cards are visual placeholders, not real projects. Replace them in the portfolio section when your images or video links are ready.",
+youtubeKicker:"Latest from my channel",youtubeTitle:"Latest YouTube Videos",youtubeDesc:"The 5 latest uploads from my channel, refreshed automatically when I publish a new video.",youtubeLoading:"Loading latest videos...",youtubeMore:"Watch all videos ↗",youtubeError:"Videos could not be loaded right now. You can visit the channel using the button below.",portfolioKicker:"Selected work",portfolioTitle:"Creative Portfolio",portfolioDesc:"A home for design, editing, and photo-manipulation projects. Replace these sample cards with your real work.",filterAll:"All",filterDesign:"Design",filterVideo:"Video",filterManipulation:"Photo Art",sampleMedia:"Project image placeholder",sampleVideo:"Project video placeholder",typeDesign:"Graphic Design",typeVideo:"Video Editing",typeManipulation:"Photo Manipulation",project1:"Branding & Visual Identity",project2:"Promo or Short-form Video",project3:"Cinematic Photo Artwork",projectDesc1:"Add a short description of the idea and goal of this project.",projectDesc2:"Describe the editing style or story behind this video.",projectDesc3:"Add details about the concept and techniques used.",projectLink:"Add project link ↗",portfolioNote:"Note: These cards are visual placeholders, not real projects. Replace them in the portfolio section when your images or video links are ready.",
 linksKicker:"Find me online",linksTitle:"Let’s stay connected",linksDesc:"All my profiles and useful links in one place.",socialBehance:"Design portfolio",socialFacebook:"Follow on Facebook",socialYoutube:"Videos and tutorials",socialTelegram:"Telegram channel",socialInstagram:"Photos and behind the scenes",socialTiktok:"Short-form videos",socialX:"Latest updates",socialLinkedin:"Professional network",socialBlogTitle:"Blog",socialBlog:"Articles and tutorials",servicesKicker:"What I can do",servicesTitle:"Creative services, from idea to execution",service1:"Graphic Design",service1desc:"Social media designs and visual identity.",service2:"Video Editing",service2desc:"Short videos, ads, and visual storytelling.",service3:"Photo Manipulation",service3desc:"Compositing and cinematic creative artwork.",service4:"Training",service4desc:"Practical design, editing, and content lessons.",contactKicker:"Let's work together",contactTitle:"Have a project in mind?",contactText:"Tell me about your idea and let's turn it into a distinctive visual experience. Reach me through the link below.",footer:"© Taher Montasser — All rights reserved"
 },
 zh: {
-navHome:"首页",navAbout:"关于我",navPortfolio:"作品集",navServices:"服务",navLinks:"链接",navContact:"联系",available:"可承接项目",
+navHome:"首页",navAbout:"关于我",navPortfolio:"作品集",navYoutube:"YouTube",navServices:"服务",navLinks:"链接",navContact:"联系",available:"可承接项目",
 eyebrow:"用视觉创意创造不同",heroTitle:"我是 Taher<br><span>Montasser</span>",role1:"视频剪辑师",role2:"平面设计师",role3:"讲师",intro:"我将创意转化为视觉故事，以清晰的表达和有感染力的制作连接观众。",viewWork:"浏览作品",connect:"联系我",profileLabel:"内容创作 • 设计 • 剪辑",
 aboutKicker:"关于我",aboutTitle:"将想法转化为视觉体验",aboutDesc:"融合创意、清晰表达与细节，打造令人印象深刻的内容。",aboutText:"我是 Taher Montasser，一名平面设计师、视频剪辑师和讲师。我帮助个人与品牌将想法转化为吸引人的设计和视频，注重叙事、节奏与视觉识别。",
 skill1:"视频剪辑",skill1sub:"视觉故事、广告与社交媒体内容",skill2:"平面设计",skill2sub:"设计、品牌识别与创意视觉",skill3:"内容创作",skill3sub:"清晰构思与有影响力的视觉呈现",skill4:"培训与教学",skill4sub:"实践教学与经验分享",
-portfolioKicker:"精选作品",portfolioTitle:"创意作品集",portfolioDesc:"展示设计、视频剪辑和图像合成项目。请将示例卡片替换为真实作品。",filterAll:"全部",filterDesign:"设计",filterVideo:"视频",filterManipulation:"图像艺术",sampleMedia:"项目图片占位",sampleVideo:"项目视频占位",typeDesign:"平面设计",typeVideo:"视频剪辑",typeManipulation:"图像合成",project1:"品牌与视觉识别",project2:"宣传片或短视频",project3:"电影感视觉作品",projectDesc1:"在这里添加项目创意和目标的简短介绍。",projectDesc2:"介绍视频的剪辑风格或故事。",projectDesc3:"补充作品概念与使用的制作技巧。",projectLink:"添加项目链接 ↗",portfolioNote:"提示：这些卡片只是视觉示例，并非真实项目。准备好图片或视频链接后，请在文件的作品集部分替换。",
+youtubeKicker:"频道最新内容",youtubeTitle:"最新 YouTube 视频",youtubeDesc:"显示频道最近发布的 5 个视频；发布新视频后会自动更新。",youtubeLoading:"正在加载最新视频…",youtubeMore:"观看全部视频 ↗",youtubeError:"暂时无法加载视频，请点击下方按钮直接访问频道。",portfolioKicker:"精选作品",portfolioTitle:"创意作品集",portfolioDesc:"展示设计、视频剪辑和图像合成项目。请将示例卡片替换为真实作品。",filterAll:"全部",filterDesign:"设计",filterVideo:"视频",filterManipulation:"图像艺术",sampleMedia:"项目图片占位",sampleVideo:"项目视频占位",typeDesign:"平面设计",typeVideo:"视频剪辑",typeManipulation:"图像合成",project1:"品牌与视觉识别",project2:"宣传片或短视频",project3:"电影感视觉作品",projectDesc1:"在这里添加项目创意和目标的简短介绍。",projectDesc2:"介绍视频的剪辑风格或故事。",projectDesc3:"补充作品概念与使用的制作技巧。",projectLink:"添加项目链接 ↗",portfolioNote:"提示：这些卡片只是视觉示例，并非真实项目。准备好图片或视频链接后，请在文件的作品集部分替换。",
 linksKicker:"在社交平台找到我",linksTitle:"保持联系",linksDesc:"将我的社交账号和常用链接集中在这里。",socialBehance:"设计作品集",socialFacebook:"关注 Facebook",socialYoutube:"视频与教程",socialTelegram:"Telegram 频道",socialInstagram:"照片与幕后花絮",socialTiktok:"短视频",socialX:"最新动态",socialLinkedin:"职业社交",socialBlogTitle:"博客",socialBlog:"文章与教程",servicesKicker:"我能提供什么",servicesTitle:"从创意到执行的视觉服务",service1:"平面设计",service1desc:"社交媒体设计与视觉识别。",service2:"视频剪辑",service2desc:"短视频、广告与视觉叙事。",service3:"图像合成",service3desc:"图像合成与电影感创作。",service4:"培训",service4desc:"设计、剪辑与内容创作实战教学。",contactKicker:"一起合作",contactTitle:"你有项目想法吗？",contactText:"告诉我你的想法，让我们把它变成独特的视觉体验。请通过下方链接联系我。",footer:"© Taher Montasser — 保留所有权利"
 }};
 const langSelect=document.getElementById('language');
@@ -257,6 +282,59 @@ document.querySelectorAll('.filter').forEach(btn=>btn.addEventListener('click',(
   document.querySelectorAll('.filter').forEach(b=>b.classList.toggle('active',b===btn));
   document.querySelectorAll('.project').forEach(card=>card.hidden=btn.dataset.filter!=='all'&&card.dataset.category!==btn.dataset.filter);
 }));
+
+// Latest 5 uploads: resolve the channel handle, read its public YouTube RSS feed, refresh periodically.
+(async function loadLatestYouTube(){
+  const grid=document.getElementById('youtubeVideos');
+  if(!grid) return;
+  const messages={ar:{loading:'جاري تحميل أحدث الفيديوهات...',error:'تعذّر تحميل الفيديوهات الآن. تقدر تشاهد القناة مباشرة من الزر بالأسفل.',empty:'لم يتم العثور على فيديوهات منشورة.'},en:{loading:'Loading latest videos...',error:'Videos could not be loaded right now. You can visit the channel using the button below.',empty:'No public videos were found.'},zh:{loading:'正在加载最新视频…',error:'暂时无法加载视频，请点击下方按钮直接访问频道。',empty:'未找到公开视频。'}};
+  const lang=()=>document.body.dataset.lang||'ar';
+  const status=(key)=>{grid.innerHTML='';const d=document.createElement('div');d.className='youtube-status';d.textContent=(messages[lang()]||messages.ar)[key];grid.appendChild(d)};
+  const render=(items)=>{
+    grid.innerHTML='';
+    if(!items||!items.length){status('empty');return}
+    items.slice(0,5).forEach(item=>{
+      const title=item.title||'YouTube video';
+      const url=item.link||('https://www.youtube.com/watch?v='+item.guid.split(':').pop());
+      const id=(url.match(/[?&]v=([^&]+)/)||url.match(/youtu\.be\/([^?&]+)/)||[])[1];
+      const thumb=(item.thumbnail||item.enclosure?.link||(id?'https://i.ytimg.com/vi/'+id+'/hqdefault.jpg':''));
+      const a=document.createElement('a');a.className='youtube-card reveal';a.href=url;a.target='_blank';a.rel='noopener noreferrer';a.setAttribute('aria-label',title);
+      const media=document.createElement('div');media.className='youtube-thumb';
+      if(thumb){const img=document.createElement('img');img.src=thumb;img.alt=title;img.loading='lazy';img.onerror=()=>{if(id)img.src='https://i.ytimg.com/vi/'+id+'/mqdefault.jpg'};media.appendChild(img)}
+      const play=document.createElement('div');play.className='youtube-play';const badge=document.createElement('span');badge.textContent='▶';play.appendChild(badge);media.appendChild(play);
+      const h=document.createElement('h3');h.textContent=title;a.append(media,h);grid.appendChild(a);
+    });
+    grid.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible'));
+  };
+  async function getFeed(){
+    status('loading');
+    try{
+      let channelId='';
+      // First try a public no-key YouTube-compatible channel resolver.
+      try{
+        const r=await fetch('https://yt.lemnoslife.com/noKey/channels?part=id&forHandle=T​​aherMontasser'.replace('​​',''),{cache:'no-store'});
+        if(r.ok){const j=await r.json();channelId=j.items?.[0]?.id||''}
+      }catch(e){}
+      // Fallback: resolve the handle from YouTube's public page via a CORS-friendly proxy.
+      if(!channelId){
+        const target='https://www.youtube.com/@TaherMontasser';
+        const r=await fetch('https://api.allorigins.win/raw?url='+encodeURIComponent(target),{cache:'no-store'});
+        if(!r.ok)throw new Error('channel lookup failed');
+        const html=await r.text();const m=html.match(/\"channelId\"\s*:\s*\"(UC[a-zA-Z0-9_-]{22})\"/)||html.match(/channel_id=\"(UC[a-zA-Z0-9_-]{22})\"/);
+        if(m)channelId=m[1];
+      }
+      if(!channelId)throw new Error('channel ID not found');
+      const feed='https://www.youtube.com/feeds/videos.xml?channel_id='+encodeURIComponent(channelId);
+      const api='https://api.rss2json.com/v1/api.json?rss_url='+encodeURIComponent(feed);
+      const r=await fetch(api,{cache:'no-store'});if(!r.ok)throw new Error('feed request failed');
+      const data=await r.json();if(data.status!=='ok'||!Array.isArray(data.items))throw new Error('feed invalid');
+      render(data.items);
+    }catch(e){status('error');console.warn('YouTube latest videos could not load:',e)}
+  }
+  getFeed();
+  setInterval(getFeed,30*60*1000);
+})();
+
 const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 const glow=document.getElementById('cursorGlow');
