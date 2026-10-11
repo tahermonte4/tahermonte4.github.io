@@ -8,12 +8,13 @@
 <title>طاهر منتصر | معرض الأعمال</title>
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-<link href="./طاهر منتصر _ معرض الأعمال_files/css2" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#07050e;--panel:rgba(19,12,33,.76);--panel2:#100a1c;--purple:#a855f7;--pink:#f0abfc;--cyan:#7dd3fc;--text:#faf7ff;--muted:#b9adc9;--line:rgba(216,180,254,.18);--glow:rgba(168,85,247,.28);--radius:24px}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:95px;max-width:100%;overflow-x:clip}
 body{margin:0;max-width:100%;background:var(--bg);color:var(--text);font-family:"Cairo",sans-serif;overflow-x:clip}
+body[data-lang="ar"],body[data-lang="ar"] button,body[data-lang="ar"] input,body[data-lang="ar"] textarea,body[data-lang="ar"] select{font-family:"Cairo",sans-serif}
 body[data-lang="en"]{font-family:"Inter",sans-serif}
 body[data-lang="zh"]{font-family:"Noto Sans SC",sans-serif}
 a{color:inherit;text-decoration:none}
@@ -189,13 +190,13 @@ footer{border-color:rgba(168,72,255,.25)}
 @media(max-width:360px){.nav{gap:7px;font-size:10px}.playlist-grid{grid-template-columns:1fr}}
 
 
-/* Flag-based language switcher */
-.language-flags{display:flex;align-items:center;gap:7px;padding:5px 7px;border:1px solid rgba(190,105,255,.35);border-radius:999px;background:rgba(10,4,24,.8);box-shadow:0 0 18px rgba(145,0,255,.12)}
-.language-flag{display:grid;place-items:center;width:34px;height:29px;padding:0;border:1px solid transparent;border-radius:999px;background:transparent;cursor:pointer;font-size:21px;line-height:1;transition:transform .2s,border-color .2s,background .2s,box-shadow .2s}
-.language-flag:hover{transform:translateY(-2px);background:rgba(173,78,255,.13)}
-.language-flag.active{border-color:#d78cff;background:rgba(160,55,255,.2);box-shadow:0 0 13px rgba(176,68,255,.4),0 0 22px rgba(168,0,255,.2)}
+/* Text-based language switcher */
+.language-flags{display:flex;align-items:center;gap:5px;padding:5px;border:1px solid rgba(190,105,255,.35);border-radius:999px;background:rgba(10,4,24,.8);box-shadow:0 0 18px rgba(145,0,255,.12)}
+.language-flag{display:inline-flex;align-items:center;justify-content:center;min-width:52px;padding:7px 11px;border:1px solid transparent;border-radius:999px;background:transparent;color:#e8ddf5;cursor:pointer;font-family:inherit;font-size:12px;font-weight:700;line-height:1.2;white-space:nowrap;transition:transform .2s,border-color .2s,background .2s,box-shadow .2s}
+.language-flag:hover{transform:translateY(-1px);background:rgba(173,78,255,.13)}
+.language-flag.active{border-color:#d78cff;background:rgba(160,55,255,.2);color:#fff;box-shadow:0 0 13px rgba(176,68,255,.4)}
 .language-flag:focus-visible{outline:2px solid #e8b4ff;outline-offset:2px}
-@media(max-width:600px){.language-flags{gap:3px;padding:4px}.language-flag{width:29px;height:27px;font-size:18px}}
+@media(max-width:600px){.language-flags{gap:2px;padding:3px}.language-flag{min-width:0;padding:7px 8px;font-size:11px}}
 </style>
 </head>
 <body data-lang="ar">
@@ -221,9 +222,9 @@ footer{border-color:rgba(168,72,255,.25)}
   </nav>
   <div class="tools">
     <div class="language-flags" role="group" aria-label="Choose language">
-      <button type="button" class="language-flag active" data-lang-choice="ar" aria-label="العربية" title="العربية — مصر" aria-pressed="true">🇪🇬</button>
-      <button type="button" class="language-flag" data-lang-choice="en" aria-label="English" title="English — United States" aria-pressed="false">🇺🇸</button>
-      <button type="button" class="language-flag" data-lang-choice="zh" aria-label="中文" title="中文 — 中国" aria-pressed="false">🇨🇳</button>
+      <button type="button" class="language-flag active" data-lang-choice="ar" aria-label="العربية" aria-pressed="true">عربي</button>
+      <button type="button" class="language-flag" data-lang-choice="en" aria-label="English" aria-pressed="false">English</button>
+      <button type="button" class="language-flag" data-lang-choice="zh" aria-label="中文" aria-pressed="false">Chinese</button>
     </div>
     <div class="availability"><span class="dot"></span><span data-i18n="available">متاح للمشاريع</span></div>
   </div>
@@ -266,7 +267,6 @@ footer{border-color:rgba(168,72,255,.25)}
     <article class="project reveal visible" data-category="video"><div class="project-media" style="background:linear-gradient(135deg,#172554,#7e22ce 52%,#be185d)"><span class="media-mark">VIDEO</span><span class="media-hint" data-i18n="sampleVideo">مكان فيديو المشروع</span></div><div class="project-body"><div class="project-type" data-i18n="typeVideo">مونتاج فيديو</div><h3 data-i18n="project2">فيديو إعلاني أو قصير</h3><p data-i18n="projectDesc2">أضف نبذة عن أسلوب المونتاج أو قصة الفيديو.</p><a class="project-link" href="https://tahermonte4.github.io/#contact" data-i18n="projectLink">أضف رابط المشروع ↗</a></div></article>
     <article class="project reveal visible" data-category="manipulation"><div class="project-media" style="background:linear-gradient(135deg,#064e3b,#6d28d9 52%,#db2777)"><span class="media-mark">ARTWORK</span><span class="media-hint" data-i18n="sampleMedia">مكان صورة المشروع</span></div><div class="project-body"><div class="project-type" data-i18n="typeManipulation">معالجة الصور</div><h3 data-i18n="project3">تكوين بصري سينمائي</h3><p data-i18n="projectDesc3">أضف تفاصيل الفكرة والتقنيات المستخدمة في العمل.</p><a class="project-link" href="https://tahermonte4.github.io/#contact" data-i18n="projectLink">أضف رابط المشروع ↗</a></div></article>
   </div>
-  <div class="portfolio-note reveal visible" data-i18n="portfolioNote">ملاحظة: البطاقات الحالية نماذج شكلية وليست أعمالًا فعلية. عند تجهيز صورك أو روابط الفيديو، استبدلها داخل قسم portfolio في الملف.</div>
 </section>
 
 <section class="section" id="youtube-playlists">
@@ -297,7 +297,6 @@ footer{border-color:rgba(168,72,255,.25)}
       <h3>Shorts</h3><p>افتح نتائج قائمة التشغيل على يوتيوب ↗</p>
     </a></div>
   <div class="playlist-footer"><a class="btn primary" href="https://www.youtube.com/@TaherMontasser/playlists" target="_blank" rel="noopener"><span data-i18n="playlistsButton">تصفّح قوائم التشغيل</span> ↗</a></div>
-  <p class="portfolio-note reveal visible">تم ربط كل بطاقة برابط قائمة التشغيل الخاصة بها على يوتيوب. الصور المعروضة مأخوذة من لقطة الشاشة.</p>
 </section>
 <section class="section" id="services">
   <div class="section-head reveal visible"><div><div class="kicker" data-i18n="servicesKicker">كيف أساعدك؟</div><h2 data-i18n="servicesTitle">خدمات إبداعية من الفكرة للتنفيذ</h2></div></div>
