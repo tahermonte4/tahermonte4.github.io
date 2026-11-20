@@ -1,1 +1,145 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080511">
+<title>Video Editing Workshop | طاهر منتصر</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07050e;--panel:rgba(19,12,33,.76);--purple:#a855f7;--pink:#f0abfc;--text:#faf7ff;--muted:#b9adc9;--line:rgba(216,180,254,.18)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:radial-gradient(ellipse at 80% 0,rgba(112,30,190,.22),transparent 40%),radial-gradient(ellipse at 0 60%,rgba(65,20,120,.2),transparent 40%),var(--bg);color:var(--text);font-family:"Cairo",sans-serif;min-height:100vh}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1100px,calc(100% - 36px));margin-inline:auto}
+.top{position:sticky;top:12px;z-index:20;display:flex;justify-content:space-between;align-items:center;margin-top:12px;padding:12px 18px;border:1px solid var(--line);border-radius:18px;background:rgba(12,7,22,.8);backdrop-filter:blur(16px)}
+.brand{font-weight:900;font-size:19px;text-shadow:0 0 22px rgba(192,132,252,.45)}
+.brand span{color:var(--pink)}
+.top nav{display:flex;gap:20px;font-size:14px;color:#e8ddf5}
+.top nav a:hover{color:var(--pink);text-shadow:0 0 16px var(--purple)}
+.hero{text-align:center;padding:70px 0 40px}
+.kicker{color:var(--pink);font-size:13px;font-weight:700;letter-spacing:2px}
+h1{font-size:clamp(34px,6vw,64px);line-height:1.2;margin:12px 0;font-weight:900;background:linear-gradient(100deg,#fff 5%,#e9a8ff 40%,#a78bfa 70%,#67e8f9);background-size:220% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:g 7s linear infinite}
+@keyframes g{to{background-position:220% center}}
+.hero p{color:#d3c6e2;max-width:620px;margin:0 auto 26px;line-height:2}
+.btn{display:inline-block;padding:13px 26px;border-radius:14px;font:700 15px "Cairo",sans-serif;color:#fff;border:1px solid rgba(240,171,252,.55);background:linear-gradient(110deg,#6d28d9,#a21caf,#7c3aed);cursor:pointer;box-shadow:0 0 24px rgba(168,85,247,.3);transition:.25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 0 34px rgba(168,85,247,.5)}
+.btn:disabled{opacity:.6;cursor:wait;transform:none}
+h2{font-size:30px;margin:0 0 6px}
+.sub{color:var(--muted);margin:0 0 24px}
+section{padding:44px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.grid button{padding:0;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--panel);aspect-ratio:4/3;cursor:zoom-in;transition:.3s}
+.grid button:hover{transform:translateY(-4px);border-color:var(--pink);box-shadow:0 0 30px rgba(168,85,247,.35)}
+.grid img{width:100%;height:100%;object-fit:cover;display:block}
+.card{max-width:640px;margin-inline:auto;padding:30px;border:1px solid var(--line);border-radius:24px;background:var(--panel);box-shadow:0 0 60px rgba(168,85,247,.15)}
+label{display:block;margin:0 0 16px;font-weight:600;font-size:14px}
+label small{color:var(--muted);font-weight:400}
+input,textarea{width:100%;margin-top:7px;padding:13px 15px;border-radius:12px;border:1px solid var(--line);background:#130a20;color:#fff;font:inherit;outline:none;transition:.2s}
+input:focus,textarea:focus{border-color:var(--purple);box-shadow:0 0 18px rgba(168,85,247,.35)}
+input[type=tel],input[type=email]{direction:ltr;text-align:right}
+.msg{margin-top:16px;padding:13px;border-radius:12px;text-align:center;display:none;font-weight:600}
+.msg.ok{display:block;background:rgba(74,222,128,.12);border:1px solid #4ade80;color:#bbf7d0}
+.msg.err{display:block;background:rgba(248,113,113,.12);border:1px solid #f87171;color:#fecaca}
+.hp{position:absolute;left:-9999px}
+#lb{position:fixed;inset:0;z-index:50;background:rgba(5,3,10,.92);display:none;align-items:center;justify-content:center;padding:20px;cursor:zoom-out}
+#lb.on{display:flex}
+#lb img{max-width:100%;max-height:100%;border-radius:14px;box-shadow:0 0 60px rgba(168,85,247,.4)}
+footer{text-align:center;color:var(--muted);padding:30px 0 50px;font-size:13px}
+@media(max-width:600px){.top nav{gap:12px;font-size:12px}.card{padding:20px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="index.html">طاهر <span>منتصر</span></a>
+    <nav><a href="index.html">الرئيسية</a><a href="#gallery">صور الورك شوب</a><a href="#register">سجّل الآن</a></nav>
+  </header>
 
+  <div class="hero">
+    <div class="kicker">WORKSHOP</div>
+    <h1>Video Editing Workshop</h1>
+    <p>ورك شوب عملي في المونتاج وصناعة الفيديو. شوف لقطات من الورك شوبس اللي اتعملت قبل كده، وسجّل بياناتك عشان تحجز مكانك في الورك شوب الجاي.</p>
+    <a class="btn" href="#register">سجّل في الورك شوب القادم</a>
+  </div>
+
+  <section id="gallery">
+    <h2>من ورك شوبس سابقة</h2>
+    <p class="sub">اضغط على أي صورة لتكبيرها</p>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section id="register">
+    <div class="card">
+      <h2>التسجيل في الورك شوب القادم</h2>
+      <p class="sub">املأ البيانات وهنتواصل معاك بتفاصيل الموعد.</p>
+      <form id="f" novalidate>
+        <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off">
+        <label>الاسم بالكامل
+          <input type="text" name="name" required minlength="6" autocomplete="name" placeholder="الاسم الثلاثي أو الرباعي">
+        </label>
+        <label>رقم الموبايل <small>(لازم يكون عليه واتساب)</small>
+          <input type="tel" name="phone" required inputmode="tel" autocomplete="tel" placeholder="01XXXXXXXXX">
+        </label>
+        <label>العنوان
+          <textarea name="address" required rows="2" autocomplete="street-address" placeholder="المحافظة - المنطقة - الشارع"></textarea>
+        </label>
+        <label>البريد الإلكتروني
+          <input type="email" name="email" required autocomplete="email" placeholder="name@example.com">
+        </label>
+        <button class="btn" id="send" type="submit" style="width:100%">إرسال بيانات التسجيل</button>
+        <div class="msg" id="msg"></div>
+      </form>
+    </div>
+  </section>
+  <footer>© Taher Montasser</footer>
+</div>
+
+<div id="lb"><img alt=""></div>
+
+<script>
+// حط صور الورك شوب جوه فولدر اسمه workshop بجانب هذا الملف
+var imgs=["590386765_10230792928621879_4357108141821065059_n.jpg","590058365_10230792926181818_8369163990607968154_n.jpg","577694369_10230511827074516_9094988606184381429_n.jpg","590871167_10230792927421849_8577836297418524452_n.jpg","590758345_10230792919341647_9217149137172470692_n.jpg","591043487_10230792924421774_6415335375446258960_n.jpg","590233587_10230792899221144_8010399003175901130_n.jpg","590747823_10230792920741682_4250052478279362262_n.jpg","574091547_10230491296321260_6815994300277409533_n.jpg","590833056_10230792900061165_2100669916517181291_n.jpg","590788382_10230792902421224_4668305198742739608_n.jpg","590775945_10230792920461675_2432656634748859679_n.jpg","590725627_10230792923101741_4018464666664939599_n.jpg","589662429_10230792908541377_6994203559680497477_n.jpg","590787535_10230792913661505_321111462114810095_n.jpg","590949879_10230792923341747_1968508361287528043_n.jpg","590271024_10230792925421799_859887496350836159_n.jpg","591746958_10230792926781833_5449442434905662000_n.jpg","590704281_10230792927621854_7960575864482827023_n.jpg","591911504_10230792927941862_6895164885714337320_n.jpg"];
+var fails=0;var grid=document.getElementById('grid'),lb=document.getElementById('lb'),lbi=lb.querySelector('img');
+imgs.forEach(function(n,i){
+  var b=document.createElement('button');b.type='button';b.setAttribute('aria-label','صورة '+(i+1));
+  var im=new Image();im.loading='lazy';im.alt='Video Editing Workshop '+(i+1);im.onerror=function(){b.remove();fails++;if(fails===imgs.length){grid.innerHTML='<p class="sub" style="grid-column:1/-1;direction:ltr;text-align:center">الصور لم تُحمّل. تأكد أن الفولدر اسمه workshop (حروف صغيرة) وأنه بجانب workshop.html، وأن الأسماء مطابقة. مثال للمسار المتوقع: workshop/'+imgs[0]+'</p>'}};im.src='workshop/'+n;
+  b.appendChild(im);b.onclick=function(){lbi.src=im.src;lb.classList.add('on')};
+  grid.appendChild(b);
+});
+lb.onclick=function(){lb.classList.remove('on')};
+document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('on')});
+
+var EMAIL='taher.ytcontact@gmail.com';
+var f=document.getElementById('f'),msg=document.getElementById('msg'),btn=document.getElementById('send');
+function show(t,c){msg.className='msg '+c;msg.textContent=t}
+f.addEventListener('submit',function(e){
+  e.preventDefault();
+  var d=new FormData(f);
+  if(d.get('_honey')){return}
+  var phone=(d.get('phone')||'').replace(/[\s\-()]/g,'');
+  if(!f.checkValidity()||d.get('name').trim().length<6){show('من فضلك املأ كل الحقول بشكل صحيح.','err');return}
+  if(!/^\+?\d{10,15}$/.test(phone)){show('رقم الموبايل غير صحيح.','err');return}
+  btn.disabled=true;btn.textContent='جاري الإرسال...';msg.className='msg';
+  fetch('https://formsubmit.co/ajax/'+EMAIL,{
+    method:'POST',
+    headers:{'Content-Type':'application/json','Accept':'application/json'},
+    body:JSON.stringify({
+      'الاسم بالكامل':d.get('name').trim(),
+      'رقم الموبايل (واتساب)':phone,
+      'العنوان':d.get('address').trim(),
+      email:d.get('email').trim(),
+      _subject:'تسجيل جديد - Video Editing Workshop',
+      _template:'table',
+      _captcha:'false'
+    })
+  }).then(function(r){return r.json()}).then(function(j){
+    if(j.success==='true'||j.success===true){f.reset();show('تم التسجيل بنجاح! هنتواصل معاك قريبًا على واتساب.','ok')}
+    else{throw new Error('fail')}
+  }).catch(function(){show('حصلت مشكلة في الإرسال، حاول تاني بعد شوية.','err')})
+  .finally(function(){btn.disabled=false;btn.textContent='إرسال بيانات التسجيل'});
+});
+</script>
+</body>
+</html>
